@@ -92,10 +92,10 @@ if __name__ == '__main__':
     t = TransmissionRefine(src,te);
     J = Recover(I,t,A,0.1);
 
-    cv2.imshow("dark",dark);
-    cv2.imshow("t",t);
+    cv2.imshow("dark",dark*255);
+    cv2.imshow("t",t*255);
     cv2.imshow('I',src);
-    cv2.imshow('J',J);
+    cv2.imshow('J',J*255);
     cv2.imwrite("./image/J.png",J*255);
     cv2.waitKey();
     
